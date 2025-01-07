@@ -3,7 +3,7 @@ type NavbarLink = {
   href: string;
 };
 
-export const NavbarLinks: NavbarLink[] = [
+export const NAVBAR_LINKS: NavbarLink[] = [
   {
     title: "Home",
     href: "#top",
