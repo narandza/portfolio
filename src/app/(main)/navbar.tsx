@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { NAVBAR_LINKS as links } from "@/constants/navbar-links";
 import { ArrowUpRight } from "lucide-react";
+import { ModeToggle } from "@/components/mode-toggle";
+import { Button } from "@/components/ui/button";
 
 export const Navbar = () => {
   return (
@@ -13,7 +15,14 @@ export const Navbar = () => {
           alt="Logo"
           width={160}
           height={30}
-          className="ml-4"
+          className="ml-4 dark:hidden"
+        />
+        <Image
+          src="/logo-dark.svg"
+          alt="Logo"
+          width={160}
+          height={30}
+          className="ml-4 hidden dark:block"
         />
       </Link>
       <div className="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3">
@@ -23,14 +32,18 @@ export const Navbar = () => {
           </Link>
         ))}
       </div>
-      <div className=" ">
-        <Link
-          href="#contact"
-          className="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4"
+      <div className="flex items-center justify-center   ">
+        <ModeToggle />
+        <Button
+          variant="ghost"
+          className="hidden lg:flex items-center gap-3 px-10 py-2.5 border  rounded-full ml-4"
+          asChild
         >
-          Contact
-          <ArrowUpRight className="size-5 ml-2" />
-        </Link>
+          <Link href="#contact">
+            Contact
+            <ArrowUpRight className="size-5 ml-2" />
+          </Link>
+        </Button>
       </div>
     </nav>
   );
