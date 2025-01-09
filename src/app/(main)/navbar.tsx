@@ -5,6 +5,12 @@ import { ArrowUpRightIcon, MenuIcon } from "lucide-react";
 import { ModeToggle } from "@/components/mode-toggle";
 import { Button } from "@/components/ui/button";
 import { NavbarLinks } from "./navbar-links";
+import {
+  Sheet,
+  SheetContent,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 
 export const Navbar = () => {
   return (
@@ -39,9 +45,20 @@ export const Navbar = () => {
             <ArrowUpRightIcon className="size-5 " />
           </Link>
         </Button>
-        <Button variant="ghost" className="rounded-full block md:hidden ml-3">
-          <MenuIcon className="" />
-        </Button>
+        <Sheet>
+          <SheetTrigger asChild>
+            <Button
+              variant="ghost"
+              className="rounded-full block md:hidden ml-3"
+            >
+              <MenuIcon />
+            </Button>
+          </SheetTrigger>
+          <SheetContent>
+            <SheetTitle />
+            links
+          </SheetContent>
+        </Sheet>
       </div>
     </nav>
   );
