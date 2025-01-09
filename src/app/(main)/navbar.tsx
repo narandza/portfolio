@@ -4,6 +4,7 @@ import { NAVBAR_LINKS as links } from "@/constants/navbar-links";
 import { ArrowUpRightIcon, MenuIcon } from "lucide-react";
 import { ModeToggle } from "@/components/mode-toggle";
 import { Button } from "@/components/ui/button";
+import { NavbarLinks } from "./navbar-links";
 
 export const Navbar = () => {
   return (
@@ -25,13 +26,7 @@ export const Navbar = () => {
           className="ml-4 hidden dark:block"
         />
       </Link>
-      <div className="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3  bg-opacity-50 bg-background">
-        {links.map((link, index) => (
-          <Link key={index} href={link.href} className="text-lg">
-            {link.title}
-          </Link>
-        ))}
-      </div>
+      <NavbarLinks links={links} />
       <div className="flex items-center justify-center">
         <ModeToggle />
         <Button
