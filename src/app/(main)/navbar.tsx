@@ -50,6 +50,7 @@ export const Navbar = () => {
             <ArrowUpRightIcon className="size-5 " />
           </Link>
         </Button>
+        {/* TODO: Check if the sheet closes on link click */}
         <Sheet>
           <SheetTrigger asChild>
             <Button

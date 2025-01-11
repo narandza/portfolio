@@ -1,5 +1,11 @@
+import { Header } from "./header";
 import { Navbar } from "./navbar";
 
 export default function Home() {
-  return <Navbar />;
+  return (
+    <div className="h-full">
+      <Navbar />
+      <Header />
+    </div>
+  );
 }
