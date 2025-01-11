@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+
 import { ArrowUpRightIcon, MenuIcon } from "lucide-react";
 import { ModeToggle } from "@/components/mode-toggle";
 import { Button } from "@/components/ui/button";
@@ -63,7 +65,19 @@ export const Navbar = () => {
               <div className=" md:hidden flex flex-col items-center gap-6 pt-10">
                 <NavbarLinks />
               </div>
-              <div className="">TODO: Contact info</div>
+              <div className="flex items-center justify-center flex-col gap-4">
+                {/* TODO: make constant if needed */}
+                <p className="text-lg">dimitijejovanovic90210@gmail.com</p>
+                <div className="flex gap-4">
+                  <Link href="https://www.linkedin.com/in/jovanovic-dimitrije">
+                    {/* TODO: Add constant for magic numbers */}
+                    <FaLinkedin size={25} />
+                  </Link>
+                  <Link href="#">
+                    <FaGithub size={25} />
+                  </Link>
+                </div>
+              </div>
             </div>
           </SheetContent>
         </Sheet>
