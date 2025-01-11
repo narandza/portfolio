@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { NAVBAR_LINKS as links } from "@/constants/navbar-links";
+
 import { ArrowUpRightIcon, MenuIcon } from "lucide-react";
 import { ModeToggle } from "@/components/mode-toggle";
 import { Button } from "@/components/ui/button";
@@ -32,7 +32,10 @@ export const Navbar = () => {
           className="ml-4 hidden dark:block"
         />
       </Link>
-      <NavbarLinks links={links} />
+      <div className="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3  bg-opacity-50 bg-background">
+        <NavbarLinks />
+      </div>
+
       <div className="flex items-center justify-center">
         <ModeToggle />
         <Button
@@ -56,7 +59,12 @@ export const Navbar = () => {
           </SheetTrigger>
           <SheetContent>
             <SheetTitle />
-            links
+            <div className=" flex flex-col justify-between h-full">
+              <div className=" md:hidden flex flex-col items-center gap-6 pt-10">
+                <NavbarLinks />
+              </div>
+              <div className="">TODO: Contact info</div>
+            </div>
           </SheetContent>
         </Sheet>
       </div>
