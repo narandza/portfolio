@@ -20,7 +20,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${montserrat.className} } antialiased`}>
+      <body
+        className={`${montserrat.className} } antialiased leading-8 overflow-x-hidden`}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
