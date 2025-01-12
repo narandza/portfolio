@@ -1,3 +1,4 @@
+import { About } from "./about";
 import { Header } from "./header";
 import { Navbar } from "./navbar";
 
@@ -6,6 +7,7 @@ export default function Home() {
     <div className="h-full">
       <Navbar />
       <Header />
+      <About />
     </div>
   );
 }
