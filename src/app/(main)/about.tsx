@@ -12,6 +12,7 @@ export const About = () => {
 
       <div className="flex w-full flex-col lg:flex-row items-center gap-20 my-20 justify-center">
         <div className="w-64 sm:w-80 rounded-3xl max-w-none">
+          {/* TODO: Make constant */}
           <Image
             src="/placeholder-image.png"
             alt="Profile Image"
@@ -32,7 +33,7 @@ export const About = () => {
             {InfoList.map(({ icon: Icon, title, description }, index) => (
               <li
                 key={index}
-                className="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer flex flex-col items-center justify-center hover:bg-gray-50 hover:-translate-y-1 duration-500 dark:hover:bg-background/70"
+                className="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer flex flex-col items-center justify-center hover:bg-gray-50 hover:-translate-y-1 duration-500 dark:hover:bg-background/70  hover:shadow-md"
               >
                 <Icon className="size-8 mt-3 text-gray-700 dark:text-white" />
                 <h3 className="my-4 font-semibold text-gray-700 dark:text-white">
