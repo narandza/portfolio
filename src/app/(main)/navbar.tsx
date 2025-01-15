@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -13,10 +15,29 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { useEffect, useState } from "react";
+import { cn } from "@/lib/utils";
 
 export const Navbar = () => {
+  const [isScroll, setIsScroll] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (scrollY > 50) {
+        setIsScroll(true);
+      } else {
+        setIsScroll(false);
+      }
+    });
+  }, []);
+
   return (
-    <nav className="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 z-50 flex items-center justify-between">
+    <nav
+      className={cn(
+        "w-full fixed  px-5 lg:px-8 xl:px-[8%] py-4 z-50 flex items-center justify-between ",
+        isScroll && "bg-background bg-opacity-50 backdrop-blur-lg shadow-sm"
+      )}
+    >
       {/* TODO: Add dimensions to constants */}
       <Link href="#top" className="pb-1">
         <Image
