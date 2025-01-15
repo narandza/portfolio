@@ -4,6 +4,9 @@ import {
   GraduationCapIcon,
 } from "lucide-react";
 import { IconType } from "react-icons";
+import { DiFirebase, DiGit, DiMongodb } from "react-icons/di";
+import { FiFigma } from "react-icons/fi";
+import { VscVscode } from "react-icons/vsc";
 
 type InfoList = {
   icon: IconType;
@@ -28,3 +31,5 @@ export const InfoList: InfoList[] = [
     description: "Build 10+ projects",
   },
 ];
+
+export const toolsList = [VscVscode, DiFirebase, DiMongodb, FiFigma, DiGit];
