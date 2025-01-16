@@ -34,8 +34,8 @@ export const Navbar = () => {
   return (
     <nav
       className={cn(
-        "w-full fixed  px-5 lg:px-8 xl:px-[8%] py-4 z-50 flex items-center justify-between ",
-        isScroll && "bg-background bg-opacity-50 backdrop-blur-lg shadow-sm"
+        "w-full fixed  px-5 lg:px-8 xl:px-[8%] py-4 z-50 flex items-center justify-between bg-background ",
+        isScroll && " bg-opacity-50 backdrop-blur-lg shadow-sm"
       )}
     >
       {/* TODO: Add dimensions to constants */}
@@ -55,7 +55,12 @@ export const Navbar = () => {
           className="ml-4 hidden dark:block"
         />
       </Link>
-      <div className="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3  bg-opacity-50 bg-background">
+      <div
+        className={cn(
+          "hidden md:flex items-center gap-6 lg:gap-8  px-12 py-3",
+          isScroll && "bg-opacity-50 bg-background "
+        )}
+      >
         <NavbarLinks />
       </div>
 
