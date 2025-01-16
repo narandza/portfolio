@@ -14,14 +14,18 @@ export const Services = () => {
       </p>
 
       <div className="grid grid-cols-4 gap-6 my-10 place-items-center">
+        {/* TODO: Make hover muted on other cards */}
         {serviceData.map(({ icon: Icon, title, description, link }, index) => (
-          <div className="w-full" key={index}>
-            <Icon className="w-10" />
+          <div
+            className="border border-muted rounded-lg px-8 py-12 flex flex-col items-center hover:shadow-md cursor-pointer hover:bg-muted hover:-translate-y-1 duration-500"
+            key={index}
+          >
+            <Icon className="size-10 bg-[#A31D1D] text-white rounded-sm p-2" />
             <h3 className="text-xl my-4">{title}</h3>
             <p className="text-sm leading-5">{description}</p>
             <Link
               href={link}
-              className="flex items-center gap-1 text-muted-foreground"
+              className="flex items-center gap-1 text-muted-foreground text-sm mt-5"
             >
               Read more <ArrowRight className="size-4" />
             </Link>

@@ -1,15 +1,14 @@
 import {
   BriefcaseBusinessIcon,
-  ChartBarDecreasingIcon,
   Code2Icon,
   GraduationCapIcon,
-  WebcamIcon,
 } from "lucide-react";
 import { IconType } from "react-icons";
-import { BiMobile } from "react-icons/bi";
-import { DiFirebase, DiGit, DiMongodb } from "react-icons/di";
+import { DiAndroid, DiFirebase, DiGit, DiMongodb } from "react-icons/di";
+import { FaBehance } from "react-icons/fa";
 import { FiFigma } from "react-icons/fi";
-import { PiGraphicsCard } from "react-icons/pi";
+import { SlPicture } from "react-icons/sl";
+import { TbWorld } from "react-icons/tb";
 import { VscVscode } from "react-icons/vsc";
 
 type InfoList = {
@@ -40,26 +39,26 @@ export const toolsList = [VscVscode, DiFirebase, DiMongodb, FiFigma, DiGit];
 
 export const serviceData = [
   {
-    icon: WebcamIcon,
+    icon: TbWorld,
     title: "Web design",
     description: "Web development is the process of building, programming",
     link: "",
   },
   {
-    icon: BiMobile,
+    icon: DiAndroid,
     title: "Mobile app",
     description:
       "Mobile app development involves creating software for mobile devices...",
     link: "",
   },
   {
-    icon: ChartBarDecreasingIcon,
+    icon: FaBehance,
     title: "UI/UX",
     description: "UI/UX design focuses on creating a seamless user experience",
     link: "",
   },
   {
-    icon: PiGraphicsCard,
+    icon: SlPicture,
     title: "Graphics design",
     description: "Creative design solutions to enhance visual communication",
     link: "",
