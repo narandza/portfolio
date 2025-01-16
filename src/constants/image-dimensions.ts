@@ -1,0 +1,2 @@
+export const PROFILE_IMAGE_WIDTH = 320;
+export const PROFILE_IMAGE_HEIGHT = 320;

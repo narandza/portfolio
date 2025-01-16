@@ -1,3 +1,7 @@
+import {
+  PROFILE_IMAGE_HEIGHT,
+  PROFILE_IMAGE_WIDTH,
+} from "@/constants/image-dimensions";
 import { InfoList, toolsList } from "@/constants/info-list";
 import Image from "next/image";
 
@@ -12,12 +16,11 @@ export const About = () => {
 
       <div className="flex w-full flex-col lg:flex-row items-center gap-20 my-20 justify-center">
         <div className="w-64 sm:w-80 rounded-3xl max-w-none">
-          {/* TODO: Make constant */}
           <Image
             src="/placeholder-image.png"
             alt="Profile Image"
-            width={320}
-            height={320}
+            width={PROFILE_IMAGE_WIDTH}
+            height={PROFILE_IMAGE_HEIGHT}
             className="rounded-3xl"
           />
         </div>
