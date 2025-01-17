@@ -1,5 +1,7 @@
+import { Button } from "@/components/ui/button";
 import { workData } from "@/constants/info-list";
-import { SendIcon } from "lucide-react";
+import { ArrowRight, SendIcon } from "lucide-react";
+import Link from "next/link";
 
 export const Work = () => {
   return (
@@ -24,13 +26,23 @@ export const Work = () => {
                 <h2 className="font-semibold ">{title}</h2>
                 <p className="text-sm text-muted-foreground">{description}</p>
               </div>
-              <div className="border rounded-full border-foreground w-10 aspect-square flex items-center justify-center shadow-xl shadow-foreground shadow-sm">
+              <div className="border rounded-full border-foreground w-10 aspect-square flex items-center justify-center shadow-foreground shadow-sm">
                 <SendIcon className="size-5" />
               </div>
             </div>
           </div>
         ))}
       </div>
+
+      <Button
+        asChild
+        variant="ghost"
+        className="w-max flex items-center justify-center gap-2 text-muted-foreground border-[0.5px] border-muted-foreground rounded-full py-6 px-10 mx-auto my-20 hover:bg-muted "
+      >
+        <Link href="">
+          Show more <ArrowRight className="size-4" />
+        </Link>
+      </Button>
     </div>
   );
 };
