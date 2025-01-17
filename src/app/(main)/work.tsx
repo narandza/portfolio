@@ -1,3 +1,6 @@
+import { workData } from "@/constants/info-list";
+import { SendIcon } from "lucide-react";
+
 export const Work = () => {
   return (
     <div id="work" className="w-full px-[12%] py-10 scroll-mt-20">
@@ -7,6 +10,27 @@ export const Work = () => {
         Welcome to my web development portfolio! Explore a collection of
         projects showcasing my expertise in front-end development
       </p>
+
+      <div className="grid grid-cols-auto lg:grid-cols-4 my-10 gap-5">
+        {workData.map(({ title, description, bgImage }, index) => (
+          <div
+            className="aspect-square bg-no-repeat bg-cover rounded-lg relative cursor-pointer group"
+            key={index}
+            style={{ backgroundImage: `url(${bgImage})` }}
+          >
+            {/* TODO: Make height the same */}
+            <div className="bg-background w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between  duration-500 group-hover:bottom-7">
+              <div className="">
+                <h2 className="font-semibold ">{title}</h2>
+                <p className="text-sm text-muted-foreground">{description}</p>
+              </div>
+              <div className="border rounded-full border-foreground w-10 aspect-square flex items-center justify-center shadow-xl shadow-foreground shadow-sm">
+                <SendIcon className="size-5" />
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

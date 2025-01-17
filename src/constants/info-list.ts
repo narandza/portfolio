@@ -72,7 +72,7 @@ export const workData = [
     bgImage: "/sample.jpg",
   },
   {
-    title: "Collaborative Document Editing App",
+    title: "Document Editing",
     description: "Mobile Design",
     bgImage: "/sample.jpg",
   },
