@@ -2,6 +2,7 @@ import { About } from "./about";
 import { Header } from "./header";
 import { Navbar } from "./navbar";
 import { Services } from "./services";
+import { Work } from "./work";
 
 export default function HomePage() {
   return (
@@ -10,6 +11,7 @@ export default function HomePage() {
       <Header />
       <About />
       <Services />
+      <Work />
     </div>
   );
 }

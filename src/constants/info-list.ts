@@ -64,3 +64,26 @@ export const serviceData = [
     link: "",
   },
 ];
+
+export const workData = [
+  {
+    title: "Frontend project",
+    description: "Web Design",
+    bgImage: "/sample.jpg",
+  },
+  {
+    title: "Collaborative Document Editing App",
+    description: "Mobile Design",
+    bgImage: "/sample.jpg",
+  },
+  {
+    title: "Language learning app",
+    description: "Web Design",
+    bgImage: "/sample.jpg",
+  },
+  {
+    title: "Team chat app",
+    description: "Web Design",
+    bgImage: "/sample.jpg",
+  },
+];
