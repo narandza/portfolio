@@ -4,6 +4,7 @@ import { z } from "zod";
 import {
   Form,
   FormControl,
+  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -44,8 +45,9 @@ export const Contact = () => {
               <FormItem>
                 <FormLabel>Name</FormLabel>
                 <FormControl>
-                  <Input placeholder="Enter your name" {...field} />
+                  <Input placeholder="John Doe" {...field} />
                 </FormControl>
+                <FormDescription>Enter your name</FormDescription>
                 <FormMessage />
               </FormItem>
             )}
@@ -57,8 +59,9 @@ export const Contact = () => {
               <FormItem>
                 <FormLabel>Email</FormLabel>
                 <FormControl>
-                  <Input placeholder="Enter your email" {...field} />
+                  <Input placeholder="example@mail.com" {...field} />
                 </FormControl>
+                <FormDescription>Enter your email</FormDescription>
                 <FormMessage />
               </FormItem>
             )}
