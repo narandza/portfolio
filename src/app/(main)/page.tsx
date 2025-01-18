@@ -1,4 +1,5 @@
 import { About } from "./about";
+import { Contact } from "./contact";
 import { Header } from "./header";
 import { Navbar } from "./navbar";
 import { Services } from "./services";
@@ -12,6 +13,7 @@ export default function HomePage() {
       <About />
       <Services />
       <Work />
+      <Contact />
     </div>
   );
 }
