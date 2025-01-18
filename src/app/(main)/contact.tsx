@@ -1,3 +1,11 @@
+import { z } from "zod";
+
+const formSchema = z.object({
+  name: z.string().min(2, { message: "Must be 2 or more characters long" }),
+  email: z.string().email({ message: "Invalid email address" }),
+  message: z.string(),
+});
+
 export const Contact = () => {
   return (
     <div className="w-full px-[12%] py-10 scroll-mt-20" id="contact">
