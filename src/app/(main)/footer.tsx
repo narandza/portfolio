@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { MailIcon } from "lucide-react";
-import { SocialMedia } from "@/components/social-media";
+
 import { Logo } from "@/components/logo";
+import { SocialMedia } from "@/components/social-media";
 
 export const Footer = () => {
   return (

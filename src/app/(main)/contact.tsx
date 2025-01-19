@@ -1,6 +1,8 @@
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
+import { toast } from "sonner";
+import { ArrowRight } from "lucide-react";
+import { useForm } from "react-hook-form";
+
 import {
   Form,
   FormControl,
@@ -11,10 +13,9 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
-import { toast } from "sonner";
+import { Textarea } from "@/components/ui/textarea";
+import { zodResolver } from "@hookform/resolvers/zod";
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "Must be 2 or more characters long" }),
@@ -31,8 +32,6 @@ export const Contact = () => {
       message: "",
     },
   });
-  // TODO: Add sonner
-
   const onSubmit = async (data: z.infer<typeof formSchema>) => {
     toast.info("Sending...");
     const formData = new FormData();
