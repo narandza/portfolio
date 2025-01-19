@@ -11,6 +11,8 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "Must be 2 or more characters long" }),
@@ -66,6 +68,20 @@ export const Contact = () => {
               </FormItem>
             )}
           />
+          <FormField
+            control={form.control}
+            name="message"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Message</FormLabel>
+                <FormControl>
+                  <Textarea placeholder="Hello..." {...field} />
+                </FormControl>
+                <FormDescription>Enter your message</FormDescription>
+              </FormItem>
+            )}
+          />
+          <Button variant="ghost">Submit</Button>
         </form>
       </Form>
     </div>
