@@ -31,9 +31,34 @@ export const Contact = () => {
     },
   });
   // TODO: Add sonner
-  // TODO: Add functionality that sends the message to my email
-  const onSubmit = (data: z.infer<typeof formSchema>) => {
-    console.log(data);
+
+  const onSubmit = async (data: z.infer<typeof formSchema>) => {
+    const formData = new FormData();
+    formData.append(
+      "access_key",
+      process.env.NEXT_PUBLIC_WEB_3_FORMS_PUBLIC_KEY!
+    );
+    formData.append("name", data.name);
+    formData.append("email", data.email);
+    formData.append("message", data.message);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        console.log("Form Submitted Successfully");
+        form.reset();
+      } else {
+        console.error("Error submitting form:", result.message);
+      }
+    } catch (error) {
+      console.error("Unexpected error:", error);
+    }
   };
 
   return (
