@@ -1,7 +1,7 @@
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { workData } from "@/constants/info-list";
 import { ArrowRight, SendIcon } from "lucide-react";
-import Link from "next/link";
 
 export const Work = () => {
   return (

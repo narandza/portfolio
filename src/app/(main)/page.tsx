@@ -1,12 +1,12 @@
 "use client";
 
-import { About } from "./about";
-import { Contact } from "./contact";
-import { Footer } from "./footer";
-import { Header } from "./header";
-import { Navbar } from "./navbar";
-import { Services } from "./services";
 import { Work } from "./work";
+import { About } from "./about";
+import { Header } from "./header";
+import { Footer } from "./footer";
+import { Navbar } from "./navbar";
+import { Contact } from "./contact";
+import { Services } from "./services";
 
 export default function HomePage() {
   return (

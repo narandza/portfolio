@@ -1,9 +1,9 @@
+import Image from "next/image";
 import {
   PROFILE_IMAGE_HEIGHT,
   PROFILE_IMAGE_WIDTH,
 } from "@/constants/image-dimensions";
 import { InfoList, toolsList } from "@/constants/info-list";
-import Image from "next/image";
 
 export const About = () => {
   return (

@@ -1,6 +1,6 @@
-import { serviceData } from "@/constants/info-list";
-import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import { serviceData } from "@/constants/info-list";
 
 export const Services = () => {
   return (
