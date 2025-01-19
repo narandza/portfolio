@@ -14,6 +14,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { toast } from "sonner";
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "Must be 2 or more characters long" }),
@@ -33,6 +34,7 @@ export const Contact = () => {
   // TODO: Add sonner
 
   const onSubmit = async (data: z.infer<typeof formSchema>) => {
+    toast.info("Sending...");
     const formData = new FormData();
     formData.append(
       "access_key",
@@ -51,10 +53,11 @@ export const Contact = () => {
       const result = await response.json();
 
       if (result.success) {
-        console.log("Form Submitted Successfully");
+        toast.success("Form Submitted Successfully");
+
         form.reset();
       } else {
-        console.error("Error submitting form:", result.message);
+        toast.error("Error submitting the form");
       }
     } catch (error) {
       console.error("Unexpected error:", error);
