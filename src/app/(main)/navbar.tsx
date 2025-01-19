@@ -1,8 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-
 import { ArrowUpRightIcon, MenuIcon } from "lucide-react";
 import { ModeToggle } from "@/components/mode-toggle";
 import { Button } from "@/components/ui/button";
@@ -15,6 +12,7 @@ import {
 } from "@/components/ui/sheet";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
+import { SocialMedia } from "@/components/social-media";
 
 export const Navbar = () => {
   const [isScroll, setIsScroll] = useState(false);
@@ -91,16 +89,9 @@ export const Navbar = () => {
                 <NavbarLinks />
               </div>
               <div className="flex items-center justify-center flex-col gap-4">
-                {/* TODO: make constant if needed */}
                 <p className="text-lg">dimitijejovanovic90210@gmail.com</p>
                 <div className="flex gap-4">
-                  <Link href="https://www.linkedin.com/in/jovanovic-dimitrije">
-                    {/* TODO: Add constant for magic numbers */}
-                    <FaLinkedin size={25} />
-                  </Link>
-                  <Link href="#">
-                    <FaGithub size={25} />
-                  </Link>
+                  <SocialMedia iconSize={25} />
                 </div>
               </div>
             </div>

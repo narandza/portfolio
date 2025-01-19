@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { MailIcon } from "lucide-react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { SocialMedia } from "@/components/social-media";
 
 export const Footer = () => {
   return (
@@ -38,17 +38,7 @@ export const Footer = () => {
           &copy; 2025 Dimitrije Jovanovic. All rights reserved.
         </p>
         <div className="flex gap-10 items-center justify-center mt-4 sm:mt-0">
-          {/* TODO: Make separate component, navbar also */}
-          <Link
-            href="https://www.linkedin.com/in/jovanovic-dimitrije"
-            target="_blank"
-          >
-            {/* TODO: Add constant for magic numbers */}
-            <FaLinkedin size={20} />
-          </Link>
-          <Link href="#" target="_blank">
-            <FaGithub size={20} />
-          </Link>
+          <SocialMedia iconSize={20} />
         </div>
       </div>
     </footer>
