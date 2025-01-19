@@ -2,6 +2,7 @@
 
 import { About } from "./about";
 import { Contact } from "./contact";
+import { Footer } from "./footer";
 import { Header } from "./header";
 import { Navbar } from "./navbar";
 import { Services } from "./services";
@@ -16,6 +17,7 @@ export default function HomePage() {
       <Services />
       <Work />
       <Contact />
+      <Footer />
     </div>
   );
 }
