@@ -1,7 +1,7 @@
 import Link from "next/link";
-import Image from "next/image";
 import { MailIcon } from "lucide-react";
 import { SocialMedia } from "@/components/social-media";
+import { Logo } from "@/components/logo";
 
 export const Footer = () => {
   return (
@@ -10,20 +10,7 @@ export const Footer = () => {
         {/* TODO: Reformat imports on all pages */}
         {/* TODO: Make logo component, replace in navbar also */}
         <Link href="#top" className="pb-1">
-          <Image
-            src="/logo.svg"
-            alt="Logo"
-            width={160}
-            height={30}
-            className="ml-4 dark:hidden"
-          />
-          <Image
-            src="/logo-dark.svg"
-            alt="Logo"
-            width={160}
-            height={30}
-            className="ml-4 hidden dark:block"
-          />
+          <Logo width={160} height={30} />
         </Link>
 
         <div className="w-max flex items-center gap-2 mx-auto">

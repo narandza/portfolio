@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRightIcon, MenuIcon } from "lucide-react";
 import { ModeToggle } from "@/components/mode-toggle";
@@ -13,6 +12,7 @@ import {
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { SocialMedia } from "@/components/social-media";
+import { Logo } from "@/components/logo";
 
 export const Navbar = () => {
   const [isScroll, setIsScroll] = useState(false);
@@ -36,20 +36,7 @@ export const Navbar = () => {
     >
       {/* TODO: Add dimensions to constants */}
       <Link href="#top" className="pb-1">
-        <Image
-          src="/logo.svg"
-          alt="Logo"
-          width={160}
-          height={30}
-          className="ml-4 dark:hidden"
-        />
-        <Image
-          src="/logo-dark.svg"
-          alt="Logo"
-          width={160}
-          height={30}
-          className="ml-4 hidden dark:block"
-        />
+        <Logo width={160} height={30} />
       </Link>
       <div
         className={cn(
