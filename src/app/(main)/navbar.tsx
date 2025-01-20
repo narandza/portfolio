@@ -15,6 +15,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { SocialMedia } from "@/components/social-media";
+import { LOGO_HEIGHT, LOGO_WIDTH } from "@/constants/image-dimensions";
 
 export const Navbar = () => {
   const [isScroll, setIsScroll] = useState(false);
@@ -38,7 +39,7 @@ export const Navbar = () => {
     >
       {/* TODO: Add dimensions to constants */}
       <Link href="#top" className="pb-1">
-        <Logo width={160} height={30} />
+        <Logo width={LOGO_WIDTH} height={LOGO_HEIGHT} />
       </Link>
       <div
         className={cn(
