@@ -1,6 +1,6 @@
-import { ArrowRightIcon, DownloadIcon } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
+import { ArrowRightIcon, DownloadIcon } from "lucide-react";
 
 export const Header = () => {
   return (

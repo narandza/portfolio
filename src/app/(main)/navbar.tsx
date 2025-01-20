@@ -1,18 +1,20 @@
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { ArrowUpRightIcon, MenuIcon } from "lucide-react";
-import { ModeToggle } from "@/components/mode-toggle";
-import { Button } from "@/components/ui/button";
+
 import { NavbarLinks } from "./navbar-links";
+
+import { cn } from "@/lib/utils";
+import { Logo } from "@/components/logo";
+import { Button } from "@/components/ui/button";
+import { ModeToggle } from "@/components/mode-toggle";
 import {
   Sheet,
   SheetContent,
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { useEffect, useState } from "react";
-import { cn } from "@/lib/utils";
 import { SocialMedia } from "@/components/social-media";
-import { Logo } from "@/components/logo";
 
 export const Navbar = () => {
   const [isScroll, setIsScroll] = useState(false);
