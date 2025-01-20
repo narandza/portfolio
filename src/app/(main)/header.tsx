@@ -2,6 +2,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "motion/react";
 import { ArrowRightIcon, DownloadIcon } from "lucide-react";
+import {
+  HEADER_AVATAR_IMAGE_HEIGHT,
+  HEADER_AVATAR_IMAGE_WIDTH,
+} from "@/constants/image-dimensions";
 
 export const Header = () => {
   return (
@@ -11,12 +15,11 @@ export const Header = () => {
         whileInView={{ scale: 1 }}
         transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
       >
-        {/* TODO: Add constant */}
         <Image
           src="/placeholder-image.png"
           alt="Profile Image"
-          width={120}
-          height={120}
+          width={HEADER_AVATAR_IMAGE_WIDTH}
+          height={HEADER_AVATAR_IMAGE_HEIGHT}
           className="rounded-full "
         />
       </motion.div>

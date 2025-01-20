@@ -1,2 +1,5 @@
 export const PROFILE_IMAGE_WIDTH = 320;
 export const PROFILE_IMAGE_HEIGHT = 320;
+
+export const HEADER_AVATAR_IMAGE_WIDTH = 120;
+export const HEADER_AVATAR_IMAGE_HEIGHT = 120;
