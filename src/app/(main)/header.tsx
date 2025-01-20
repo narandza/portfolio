@@ -1,11 +1,17 @@
 import Link from "next/link";
 import Image from "next/image";
+import { motion } from "motion/react";
 import { ArrowRightIcon, DownloadIcon } from "lucide-react";
 
 export const Header = () => {
   return (
     <header className="w-11/12 max-w-3xl text-center mx-auto flex flex-col items-center justify-center gap-4 pt-[220px]">
-      <div className="">
+      <motion.div
+        initial={{ scale: 0 }}
+        whileInView={{ scale: 1 }}
+        transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
+      >
+        {/* TODO: Add constant */}
         <Image
           src="/placeholder-image.png"
           alt="Profile Image"
@@ -13,33 +19,64 @@ export const Header = () => {
           height={120}
           className="rounded-full "
         />
-      </div>
-      <h3 className="text-xl md:text-2xl mb-3">
+      </motion.div>
+      <motion.h3
+        initial={{ y: -20, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.3 }}
+        className="text-xl md:text-2xl mb-3"
+      >
         Hi! I&apos;m Dimitrije Jovanovic
-      </h3>
+      </motion.h3>
 
-      <h1 className="text-3xl sm:text-6xl lg:text-[66px] ">
+      <motion.h1
+        initial={{ y: -30, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.8, delay: 0.5 }}
+        className="text-2xl sm:text-6xl lg:text-[66px] "
+      >
         frontend web developer based in Belgrade.
-      </h1>
-      <p className="max-w-2xl mx-auto">
+      </motion.h1>
+      <motion.p
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.7 }}
+        className="max-w-2xl mx-auto"
+      >
         I&apos;m a frontend developer from Belgrade, Serbia with 3+ years of
         experience
-      </p>
+      </motion.p>
 
       <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">
-        <Link
-          href="#contact"
-          className="px-10 py-3 border rounded-full border-white bg-foreground text-background flex items-center gap-2"
+        {/* TODO: Add custom component for animation */}
+        <motion.div
+          initial={{ y: 30, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6, delay: 1 }}
+          className=""
         >
-          Contact me <ArrowRightIcon />
-        </Link>
+          <Link
+            href="#contact"
+            className="px-10 py-3 border rounded-full border-white bg-foreground text-background flex items-center gap-2"
+          >
+            Contact me <ArrowRightIcon />
+          </Link>
+        </motion.div>
+
         {/* TODO: Add resume */}
-        <Link
-          href=""
-          className="px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2"
+        <motion.div
+          initial={{ y: 30, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6, delay: 1 }}
+          className=""
         >
-          My Resume <DownloadIcon />
-        </Link>
+          <Link
+            href=""
+            className="px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2"
+          >
+            My Resume <DownloadIcon />
+          </Link>
+        </motion.div>
       </div>
     </header>
   );
