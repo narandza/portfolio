@@ -37,7 +37,6 @@ export const Navbar = () => {
         isScroll && " bg-opacity-50 backdrop-blur-lg shadow-sm"
       )}
     >
-      {/* TODO: Add dimensions to constants */}
       <Link href="#top" className="pb-1">
         <Logo width={LOGO_WIDTH} height={LOGO_HEIGHT} />
       </Link>

@@ -1,12 +1,33 @@
 import Link from "next/link";
+import { motion } from "motion/react";
 import { ArrowRight } from "lucide-react";
 import { serviceData } from "@/constants/info-list";
 
 export const Services = () => {
   return (
-    <div id="services" className="w-full px-[12%] py-10 scroll-mt-20 ">
-      <h4 className="text-center mb-2 text-lg ">What I offer</h4>
-      <h2 className="text-center text-5xl">My Services</h2>
+    <motion.div
+      id="services"
+      className="w-full px-[12%] py-10 scroll-mt-20"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+    >
+      <motion.h4
+        className="text-center mb-2 text-lg"
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.3, delay: 0.5 }}
+      >
+        What I offer
+      </motion.h4>
+      <motion.h2
+        className="text-center text-5xl"
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
+      >
+        My Services
+      </motion.h2>
 
       <p className="text-center max-w-2xl mx-auto mt-5 mb-12 text-lg">
         I am a frontend developer from Belgrade, Serbia with 3+ years of
@@ -32,6 +53,6 @@ export const Services = () => {
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
