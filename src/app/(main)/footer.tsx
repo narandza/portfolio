@@ -17,7 +17,7 @@ export const Footer = () => {
         </Link>
 
         <div className="w-max flex items-center gap-2 mx-auto">
-          <MailIcon className="size-4 text-[#A31D1D]" />
+          <MailIcon className="size-4 text-main" />
           dimitrijejovanovic90210@gmail.com
         </div>
       </div>

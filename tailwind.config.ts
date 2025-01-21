@@ -13,6 +13,7 @@ export default {
         auto: "repeat(auto-fit), minmax(200px, 1f)",
       },
       colors: {
+        main: "#A31D1D",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
