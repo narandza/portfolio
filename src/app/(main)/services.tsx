@@ -29,17 +29,28 @@ export const Services = () => {
         My Services
       </motion.h2>
 
-      <p className="text-center max-w-2xl mx-auto mt-5 mb-12 text-lg">
+      <motion.p
+        className="text-center max-w-2xl mx-auto mt-5 mb-12 text-lg"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.7 }}
+      >
         I am a frontend developer from Belgrade, Serbia with 3+ years of
         experience
-      </p>
+      </motion.p>
 
-      <div className="grid grid-cols-auto lg:grid-cols-4 gap-6 my-10 ">
+      <motion.div
+        className="grid grid-cols-auto lg:grid-cols-4 gap-6 my-10"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.9 }}
+      >
         {/* TODO: Make hover muted on other cards */}
         {serviceData.map(({ icon: Icon, title, description, link }, index) => (
-          <div
+          <motion.div
             className="border border-muted rounded-lg px-8 py-12 flex flex-col items-center hover:shadow-md cursor-pointer hover:bg-muted hover:-translate-y-1 duration-500 "
             key={index}
+            whileHover={{ scale: 1.05 }}
           >
             <Icon className="size-10 bg-main text-white rounded-sm p-2" />
             <h3 className="text-xl my-4">{title}</h3>
@@ -50,9 +61,9 @@ export const Services = () => {
             >
               Read more <ArrowRight className="size-4" />
             </Link>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </motion.div>
   );
 };
