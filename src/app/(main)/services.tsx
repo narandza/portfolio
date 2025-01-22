@@ -45,7 +45,6 @@ export const Services = () => {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.9 }}
       >
-        {/* TODO: Make hover muted on other cards */}
         {serviceData.map(({ icon: Icon, title, description, link }, index) => (
           <motion.div
             className="border border-muted rounded-lg px-8 py-12 flex flex-col items-center hover:shadow-md cursor-pointer hover:bg-muted hover:-translate-y-1 duration-500 "

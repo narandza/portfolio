@@ -51,7 +51,6 @@ export const Header = () => {
       </motion.p>
 
       <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">
-        {/* TODO: Add custom component for animation */}
         <motion.div
           initial={{ y: 30, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}

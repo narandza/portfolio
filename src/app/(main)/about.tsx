@@ -76,7 +76,7 @@ export const About = () => {
             {InfoList.map(({ icon: Icon, title, description }, index) => (
               <motion.li
                 key={index}
-                className="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer flex flex-col items-center justify-center hover:bg-gray-50 hover:-translate-y-1 duration-500 dark:hover:bg-background/70  hover:shadow-md"
+                className="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer flex flex-col items-center justify-center hover:bg-muted hover:-translate-y-1 duration-500   hover:shadow-md"
                 whileHover={{ scale: 1.05 }}
               >
                 <Icon className="size-8 mt-3 text-gray-700 dark:text-white" />
