@@ -1,19 +1,46 @@
 import Link from "next/link";
+import { motion } from "motion/react";
+import { ArrowRight, SendIcon } from "lucide-react";
+
 import { Button } from "@/components/ui/button";
 import { workData } from "@/constants/info-list";
-import { ArrowRight, SendIcon } from "lucide-react";
 
 export const Work = () => {
   return (
-    <div id="work" className="w-full px-[12%] py-10 scroll-mt-20">
-      <h4 className="text-center mb-2 text-lg ">My portfolio</h4>
-      <h2 className="text-center text-5xl ">My latest work</h2>
-      <p className="text-center max-w-2xl mx-auto mt-5 mb-12">
+    <motion.div
+      id="work"
+      className="w-full px-[12%] py-10 scroll-mt-20"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+    >
+      <motion.h4
+        className="text-center mb-2 text-lg "
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.3, delay: 0.5 }}
+      >
+        My portfolio
+      </motion.h4>
+      <motion.h2
+        className="text-center text-5xl"
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
+      >
+        My latest work
+      </motion.h2>
+      <motion.p
+        className="text-center max-w-2xl mx-auto mt-5 mb-12"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.7 }}
+      >
         Welcome to my web development portfolio! Explore a collection of
         projects showcasing my expertise in front-end development
-      </p>
+      </motion.p>
 
-      <div className="grid grid-cols-auto lg:grid-cols-4 my-10 gap-5">
+      <motion.div className="grid grid-cols-auto lg:grid-cols-4 my-10 gap-5">
         {workData.map(({ title, description, bgImage }, index) => (
           <div
             className="aspect-square bg-no-repeat bg-cover rounded-lg relative cursor-pointer group"
@@ -32,7 +59,7 @@ export const Work = () => {
             </div>
           </div>
         ))}
-      </div>
+      </motion.div>
 
       <Button
         asChild
@@ -43,6 +70,6 @@ export const Work = () => {
           Show more <ArrowRight className="size-4" />
         </Link>
       </Button>
-    </div>
+    </motion.div>
   );
 };
