@@ -51,6 +51,7 @@ export const Services = () => {
             className="border border-muted rounded-lg px-8 py-12 flex flex-col items-center hover:shadow-md cursor-pointer hover:bg-muted hover:-translate-y-1 duration-500 "
             key={index}
             whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.3 }}
           >
             <Icon className="size-10 bg-main text-white rounded-sm p-2" />
             <h3 className="text-xl my-4">{title}</h3>

@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { motion } from "motion/react";
 import { ArrowRight, SendIcon } from "lucide-react";
 
@@ -40,12 +39,19 @@ export const Work = () => {
         projects showcasing my expertise in front-end development
       </motion.p>
 
-      <motion.div className="grid grid-cols-auto lg:grid-cols-4 my-10 gap-5">
+      <motion.div
+        className="grid grid-cols-auto lg:grid-cols-4 my-10 gap-5"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.9 }}
+      >
         {workData.map(({ title, description, bgImage }, index) => (
-          <div
+          <motion.div
             className="aspect-square bg-no-repeat bg-cover rounded-lg relative cursor-pointer group"
             key={index}
             style={{ backgroundImage: `url(${bgImage})` }}
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.3 }}
           >
             {/* TODO: Make height the same */}
             <div className="bg-background w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between  duration-500 group-hover:bottom-7">
@@ -57,7 +63,7 @@ export const Work = () => {
                 <SendIcon className="size-5" />
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </motion.div>
 
@@ -66,9 +72,14 @@ export const Work = () => {
         variant="ghost"
         className="w-max flex items-center justify-center gap-2 text-muted-foreground border-[0.5px] border-muted-foreground rounded-full py-6 px-10 mx-auto my-20 hover:bg-muted "
       >
-        <Link href="">
+        <motion.a
+          href=""
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 1.1 }}
+        >
           Show more <ArrowRight className="size-4" />
-        </Link>
+        </motion.a>
       </Button>
     </motion.div>
   );
