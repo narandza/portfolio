@@ -69,8 +69,8 @@ export const Work = () => {
 
       <Button
         asChild
-        variant="ghost"
-        className="w-max flex items-center justify-center gap-2 text-muted-foreground border-[0.5px] border-muted-foreground rounded-full py-6 px-10 mx-auto my-20 hover:bg-muted "
+        variant="outline"
+        className="w-max flex items-center justify-center gap-2 text-muted-foreground rounded-full py-6 px-10 mx-auto my-20 hover:bg-muted "
       >
         <motion.a
           href=""

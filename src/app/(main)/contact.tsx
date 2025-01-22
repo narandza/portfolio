@@ -175,7 +175,7 @@ export const Contact = () => {
           >
             <Button
               variant="outline"
-              className="flex items-center justify-between gap-2 rounded-full mx-auto py-3 px-8"
+              className="w-max flex items-center justify-center gap-2 text-muted-foreground rounded-full py-6 px-10 mx-auto my-20 hover:bg-muted"
             >
               Submit
               <ArrowRight className="size-4" />

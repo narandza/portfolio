@@ -52,7 +52,7 @@ export const Navbar = () => {
       <div className="flex items-center justify-center">
         <ModeToggle />
         <Button
-          variant="ghost"
+          variant="outline"
           className="hidden lg:flex items-center gap-1 px-10 py-2.5 border rounded-full ml-4"
           asChild
         >
@@ -65,7 +65,7 @@ export const Navbar = () => {
         <Sheet>
           <SheetTrigger asChild>
             <Button
-              variant="ghost"
+              variant="outline"
               className="rounded-full block md:hidden ml-3"
             >
               <MenuIcon />
