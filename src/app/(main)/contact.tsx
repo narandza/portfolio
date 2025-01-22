@@ -99,37 +99,52 @@ export const Contact = () => {
       </motion.p>
 
       <Form {...form}>
-        <form
+        <motion.form
           onSubmit={form.handleSubmit(onSubmit)}
           className="space-y-8 max-w-2xl mx-auto"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.9 }}
         >
           <div className="grid grid-cols-auto lg:grid-cols-2 gap-6 mt-10 mb-8">
             <FormField
               control={form.control}
               name="name"
               render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Name</FormLabel>
-                  <FormControl>
-                    <Input placeholder="John Doe" {...field} />
-                  </FormControl>
-                  <FormDescription>Enter your name</FormDescription>
-                  <FormMessage />
-                </FormItem>
+                <motion.div
+                  initial={{ opacity: 0, x: -50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay: 1.1 }}
+                >
+                  <FormItem>
+                    <FormLabel>Name</FormLabel>
+                    <FormControl>
+                      <Input placeholder="John Doe" {...field} />
+                    </FormControl>
+                    <FormDescription>Enter your name</FormDescription>
+                    <FormMessage />
+                  </FormItem>
+                </motion.div>
               )}
             />
             <FormField
               control={form.control}
               name="email"
               render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Email</FormLabel>
-                  <FormControl>
-                    <Input placeholder="example@mail.com" {...field} />
-                  </FormControl>
-                  <FormDescription>Enter your email</FormDescription>
-                  <FormMessage />
-                </FormItem>
+                <motion.div
+                  initial={{ opacity: 0, x: 50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay: 1.1 }}
+                >
+                  <FormItem>
+                    <FormLabel>Email</FormLabel>
+                    <FormControl>
+                      <Input placeholder="example@mail.com" {...field} />
+                    </FormControl>
+                    <FormDescription>Enter your email</FormDescription>
+                    <FormMessage />
+                  </FormItem>
+                </motion.div>
               )}
             />
           </div>
@@ -138,24 +153,35 @@ export const Contact = () => {
             control={form.control}
             name="message"
             render={({ field }) => (
-              <FormItem>
-                <FormLabel>Message</FormLabel>
-                <FormControl>
-                  <Textarea placeholder="Hello..." {...field} />
-                </FormControl>
-                <FormDescription>Enter your message</FormDescription>
-              </FormItem>
+              <motion.div
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 1.3 }}
+              >
+                <FormItem>
+                  <FormLabel>Message</FormLabel>
+                  <FormControl>
+                    <Textarea placeholder="Hello..." {...field} />
+                  </FormControl>
+                  <FormDescription>Enter your message</FormDescription>
+                </FormItem>
+              </motion.div>
             )}
           />
           {/* TODO: Replace all buttons with btn outline */}
-          <Button
-            variant="outline"
-            className="flex items-center justify-between gap-2 rounded-full mx-auto py-3 px-8"
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.3 }}
           >
-            Submit
-            <ArrowRight className="size-4" />
-          </Button>
-        </form>
+            <Button
+              variant="outline"
+              className="flex items-center justify-between gap-2 rounded-full mx-auto py-3 px-8"
+            >
+              Submit
+              <ArrowRight className="size-4" />
+            </Button>
+          </motion.div>
+        </motion.form>
       </Form>
     </motion.div>
   );
