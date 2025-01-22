@@ -1,5 +1,6 @@
 import { z } from "zod";
 import { toast } from "sonner";
+import { motion } from "motion/react";
 import { ArrowRight } from "lucide-react";
 import { useForm } from "react-hook-form";
 
@@ -64,13 +65,38 @@ export const Contact = () => {
   };
 
   return (
-    <div className="w-full px-[12%] py-10 scroll-mt-20" id="contact">
-      <h4 className="text-center mb-2 text-lg">Connect with me</h4>
-      <h2 className="text-center text-5xl">Get in touch</h2>
-      <p className="text-center max-w-2xl mx-auto mt-5 mb-12">
+    <motion.div
+      className="w-full px-[12%] py-10 scroll-mt-20"
+      id="contact"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+    >
+      <motion.h4
+        className="text-center mb-2 text-lg"
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.3, delay: 0.5 }}
+      >
+        Connect with me
+      </motion.h4>
+      <motion.h2
+        className="text-center text-5xl"
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
+      >
+        Get in touch
+      </motion.h2>
+      <motion.p
+        className="text-center max-w-2xl mx-auto mt-5 mb-12"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.7 }}
+      >
         I&apos;d love to hear from you! If you have any questions, comments, or
         feedback, please use the form below
-      </p>
+      </motion.p>
 
       <Form {...form}>
         <form
@@ -131,6 +157,6 @@ export const Contact = () => {
           </Button>
         </form>
       </Form>
-    </div>
+    </motion.div>
   );
 };
