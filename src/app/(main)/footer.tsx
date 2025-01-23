@@ -4,6 +4,7 @@ import { MailIcon } from "lucide-react";
 import { Logo } from "@/components/logo";
 import { SocialMedia } from "@/components/social-media";
 import { LOGO_HEIGHT, LOGO_WIDTH } from "@/constants/image-dimensions";
+import { CONTACT_EMAIL } from "@/constants/info-list";
 
 const currentYear = new Date().getFullYear();
 const iconSize = 20;
@@ -18,7 +19,7 @@ export const Footer = () => {
 
         <div className="w-max flex items-center gap-2 mx-auto">
           <MailIcon className="size-4 text-main" />
-          dimitrijejovanovic90210@gmail.com
+          {CONTACT_EMAIL}
         </div>
       </div>
 

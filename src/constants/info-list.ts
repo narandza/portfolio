@@ -11,6 +11,8 @@ import { SlPicture } from "react-icons/sl";
 import { TbWorld } from "react-icons/tb";
 import { VscVscode } from "react-icons/vsc";
 
+export const CONTACT_EMAIL = "dimitrijejovanovic90210@gmail.com";
+
 type InfoList = {
   icon: IconType;
   title: string;

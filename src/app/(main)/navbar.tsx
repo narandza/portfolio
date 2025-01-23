@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { ArrowUpRightIcon, MenuIcon } from "lucide-react";
+import { ArrowUpRightIcon, MailIcon, MenuIcon } from "lucide-react";
 
 import { NavbarLinks } from "./navbar-links";
 
@@ -16,6 +16,7 @@ import {
 } from "@/components/ui/sheet";
 import { SocialMedia } from "@/components/social-media";
 import { LOGO_HEIGHT, LOGO_WIDTH } from "@/constants/image-dimensions";
+import { CONTACT_EMAIL } from "@/constants/info-list";
 
 export const Navbar = () => {
   const [isScroll, setIsScroll] = useState(false);
@@ -78,7 +79,10 @@ export const Navbar = () => {
                 <NavbarLinks />
               </div>
               <div className="flex items-center justify-center flex-col gap-4">
-                <p className="text-lg">dimitijejovanovic90210@gmail.com</p>
+                <div className="text-lg">
+                  <MailIcon className="size-4 text-main" />
+                  {CONTACT_EMAIL}
+                </div>
                 <div className="flex gap-4">
                   <SocialMedia iconSize={25} />
                 </div>
