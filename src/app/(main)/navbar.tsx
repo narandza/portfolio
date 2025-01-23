@@ -19,6 +19,7 @@ import { LOGO_HEIGHT, LOGO_WIDTH } from "@/constants/image-dimensions";
 import { CONTACT_EMAIL } from "@/constants/info-list";
 
 export const Navbar = () => {
+  const [open, setIsOpen] = useState(false);
   const [isScroll, setIsScroll] = useState(false);
 
   useEffect(() => {
@@ -62,9 +63,8 @@ export const Navbar = () => {
             <ArrowUpRightIcon className="size-5 " />
           </Link>
         </Button>
-        {/* TODO: Check if the sheet closes on link click */}
-        <Sheet>
-          <SheetTrigger asChild>
+        <Sheet open={open}>
+          <SheetTrigger asChild onClick={() => setIsOpen(!open)}>
             <Button
               variant="outline"
               className="rounded-full block md:hidden ml-3"
@@ -76,12 +76,12 @@ export const Navbar = () => {
             <SheetTitle />
             <div className=" flex flex-col justify-between h-full">
               <div className=" md:hidden flex flex-col items-center gap-6 pt-10">
-                <NavbarLinks />
+                <NavbarLinks setIsOpen={setIsOpen} />
               </div>
               <div className="flex items-center justify-center flex-col gap-4">
-                <div className="text-lg">
+                <div className=" flex items-center justify-center gap-1 px-3 w-full">
                   <MailIcon className="size-4 text-main" />
-                  {CONTACT_EMAIL}
+                  <p className="text-xs truncate"> {CONTACT_EMAIL}</p>
                 </div>
                 <div className="flex gap-4">
                   <SocialMedia iconSize={25} />
