@@ -7,6 +7,7 @@ import { Footer } from "./footer";
 import { Navbar } from "./navbar";
 import { Contact } from "./contact";
 import { Services } from "./services";
+import { Experience } from "./experience";
 
 export default function HomePage() {
   return (
@@ -14,8 +15,9 @@ export default function HomePage() {
       <Navbar />
       <Header />
       <About />
-      <Services />
       <Work />
+      <Experience />
+      <Services />
       <Contact />
       <Footer />
     </div>

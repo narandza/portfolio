@@ -14,7 +14,7 @@ export const Work = () => {
       transition={{ duration: 1 }}
     >
       <motion.h4
-        className="text-center mb-2 text-lg "
+        className="text-center mb-2 text-lg"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.3, delay: 0.5 }}
