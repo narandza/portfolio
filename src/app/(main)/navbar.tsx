@@ -63,8 +63,8 @@ export const Navbar = () => {
             <ArrowUpRightIcon className="size-5 " />
           </Link>
         </Button>
-        <Sheet open={open}>
-          <SheetTrigger asChild onClick={() => setIsOpen(!open)}>
+        <Sheet open={open} onOpenChange={setIsOpen}>
+          <SheetTrigger asChild>
             <Button
               variant="outline"
               className="rounded-full block md:hidden ml-3"

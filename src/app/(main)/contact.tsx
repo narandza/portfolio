@@ -168,7 +168,6 @@ export const Contact = () => {
               </motion.div>
             )}
           />
-          {/* TODO: Replace all buttons with btn outline */}
           <motion.div
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
