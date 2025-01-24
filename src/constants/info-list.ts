@@ -11,6 +11,37 @@ import { SlPicture } from "react-icons/sl";
 import { TbWorld } from "react-icons/tb";
 import { VscVscode } from "react-icons/vsc";
 
+export const WorkExperience = [
+  {
+    company: "HyperOptic",
+    position: "Network & IT Operations Technician",
+    startDate: "Jul 2023",
+    endDate: "Nov 2023",
+    description: [
+      "Execute switch replacements following established procedures",
+      "Collaborate with network maintenance team to schedule maintenance",
+      "Coordinate with Network Engineers and IT Operations Engineers to resolve technical issues",
+      "Keep senior engineers updated on project status, and challenges while ensuring compliance",
+      "Provide training and knowledge transfer for improved technical proficiency",
+      "Document all project activities and contribute to progress reports",
+    ],
+  },
+  {
+    company: "HTEC Group",
+    position: "Frontend Web Developer ",
+    startDate: "Dec 2022",
+    endDate: "Jan 2023",
+    description: [
+      "Gained practical experience in software testing using Scrum methodology	",
+      "Worked with React library for web application development",
+      "Created project tasks and contributed to document preparation",
+      "Participated in daily stand-up meetings and collaborated on task solutions",
+      "Completed a professional English language course.",
+      "Conducted Sprint-end demonstrations to showcase practical learning outcomes.",
+    ],
+  },
+];
+
 export const CONTACT_EMAIL = "dimitrijejovanovic90210@gmail.com";
 
 type InfoList = {
