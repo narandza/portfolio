@@ -15,8 +15,8 @@ export const WorkExperience = [
   {
     company: "HyperOptic",
     position: "Network & IT Operations Technician",
-    startDate: "Jul 2023",
-    endDate: "Nov 2023",
+    startDate: new Date("2023-07-01"),
+    endDate: new Date("2023-11-31"),
     description: [
       "Execute switch replacements following established procedures",
       "Collaborate with network maintenance team to schedule maintenance",
@@ -29,8 +29,8 @@ export const WorkExperience = [
   {
     company: "HTEC Group",
     position: "Frontend Web Developer ",
-    startDate: "Dec 2022",
-    endDate: "Jan 2023",
+    startDate: new Date("2022-12-01"),
+    endDate: new Date("2023-01-31"),
     description: [
       "Gained practical experience in software testing using Scrum methodology	",
       "Worked with React library for web application development",
