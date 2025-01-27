@@ -1,3 +1,5 @@
+import { WorkExperience } from "@/constants/info-list";
+import { cn } from "@/lib/utils";
 import { motion } from "motion/react";
 
 export const Experience = () => {
@@ -34,6 +36,23 @@ export const Experience = () => {
         Explore the milestones of my career, highlighting the roles and projects
         where I contributed, learned, and grew as a professional.
       </motion.p>
+      <div className=" relative flex flex-col items-center space-y-12">
+        <div className="absolute top-0 bottom-0 left-1/2 w-1 bg-muted-foreground rounded-full" />
+
+        {WorkExperience.map((job, index) => (
+          <div
+            className={cn(
+              "flex flex-col items-center md:items-start md:w-1/2 space-y-4",
+              index % 2 === 0 ? "md:ml-auto md:pr-6" : "md:mr-auto md:pl-6"
+            )}
+            style={{
+              transform:
+                index % 2 === 0 ? "translateX(50%)" : "translateX(-50%)",
+            }}
+            key={index}
+          ></div>
+        ))}
+      </div>
     </motion.div>
   );
 };
