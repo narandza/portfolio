@@ -3,6 +3,18 @@ import { cn } from "@/lib/utils";
 import { motion } from "motion/react";
 
 export const Experience = () => {
+  const isEvenIndex = (index: number) => {
+    return index % 2;
+  };
+
+  const formatDate = (date: Date) => {
+    const options: Intl.DateTimeFormatOptions = {
+      year: "numeric",
+      month: "short",
+    };
+    return new Intl.DateTimeFormat("en-US", options).format(date);
+  };
+
   return (
     <motion.div
       id="experience"
@@ -43,23 +55,24 @@ export const Experience = () => {
           <div
             className={cn(
               "flex flex-col items-center md:items-start md:w-1/2 space-y-4 ",
-              index % 2 === 0 ? "md:ml-auto md:pr-6" : "md:mr-auto md:pl-6"
+              isEvenIndex(index) ? "md:ml-auto md:pr-6" : "md:mr-auto md:pl-6"
             )}
             style={{
-              transform:
-                index % 2 === 0 ? "translateX(20%)" : "translateX(20%)",
+              transform: isEvenIndex(index)
+                ? "translateX(20%)"
+                : "translateX(20%)",
             }}
             key={index}
           >
             <div
               className={cn(
                 "flex items-center justify-center gap-2",
-                index % 2 === 0 ? "" : "flex-row-reverse "
+                isEvenIndex(index) ? "" : "flex-row-reverse "
               )}
             >
               <div className="flex items-center justify-center size-5 bg-main rounded-full" />
               <p className="text-muted-foreground">
-                {job.startDate.getFullYear()} - {job.endDate.getFullYear()}
+                {formatDate(job.startDate)} - {formatDate(job.endDate)}
               </p>
             </div>
 
