@@ -36,21 +36,37 @@ export const Experience = () => {
         Explore the milestones of my career, highlighting the roles and projects
         where I contributed, learned, and grew as a professional.
       </motion.p>
-      <div className=" relative flex flex-col items-center space-y-12">
+      <div className=" relative flex flex-col items-center space-y-12  px-[12%] py-10 ">
         <div className="absolute top-0 bottom-0 left-1/2 w-1 bg-muted-foreground rounded-full" />
 
         {WorkExperience.map((job, index) => (
           <div
             className={cn(
-              "flex flex-col items-center md:items-start md:w-1/2 space-y-4",
+              "flex flex-col items-center md:items-start md:w-1/2 space-y-4 ",
               index % 2 === 0 ? "md:ml-auto md:pr-6" : "md:mr-auto md:pl-6"
             )}
             style={{
               transform:
-                index % 2 === 0 ? "translateX(50%)" : "translateX(-50%)",
+                index % 2 === 0 ? "translateX(20%)" : "translateX(20%)",
             }}
             key={index}
-          ></div>
+          >
+            <div
+              className={cn(
+                "flex items-center justify-center gap-2",
+                index % 2 === 0 ? "" : "flex-row-reverse "
+              )}
+            >
+              <div className="flex items-center justify-center size-5 bg-main rounded-full" />
+              <p className="text-muted-foreground">
+                {job.startDate.getFullYear()} - {job.endDate.getFullYear()}
+              </p>
+            </div>
+
+            <div className="p-4 shadow-md rounded-lg">
+              <h3 className="text-xl font-semibold">{job.position}</h3>
+            </div>
+          </div>
         ))}
       </div>
     </motion.div>
