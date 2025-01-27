@@ -60,7 +60,7 @@ export const Experience = () => {
             style={{
               transform: isEvenIndex(index)
                 ? "translateX(20%)"
-                : "translateX(20%)",
+                : "translateX(-20%)",
             }}
             key={index}
           >
@@ -78,6 +78,13 @@ export const Experience = () => {
 
             <div className="p-4 shadow-md rounded-lg">
               <h3 className="text-xl font-semibold">{job.position}</h3>
+              <ul className="list-disc list-inside mt-2 text-muted-foreground">
+                {job.description.map((description, i) => (
+                  <li className="" key={i}>
+                    {description}
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         ))}
