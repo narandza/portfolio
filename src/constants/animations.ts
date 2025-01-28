@@ -1,2 +1,4 @@
+export const Y_AXIS_INITIAL_POSITION = -20;
+
 export const SECONDARY_HEADING_DELAY_TIME = 0.3;
 export const SECONDARY_HEADING_DURATION_TIME = 0.5;

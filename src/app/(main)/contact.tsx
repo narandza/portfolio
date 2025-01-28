@@ -20,6 +20,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import {
   SECONDARY_HEADING_DELAY_TIME,
   SECONDARY_HEADING_DURATION_TIME,
+  Y_AXIS_INITIAL_POSITION,
 } from "@/constants/animations";
 
 const formSchema = z.object({
@@ -78,7 +79,7 @@ export const Contact = () => {
     >
       <motion.h4
         className="text-center mb-2 text-lg"
-        initial={{ opacity: 0, y: -20 }}
+        initial={{ opacity: 0, y: Y_AXIS_INITIAL_POSITION }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{
           duration: SECONDARY_HEADING_DURATION_TIME,
@@ -89,7 +90,7 @@ export const Contact = () => {
       </motion.h4>
       <motion.h2
         className="text-center text-5xl"
-        initial={{ opacity: 0, y: -20 }}
+        initial={{ opacity: 0, y: Y_AXIS_INITIAL_POSITION }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.5 }}
       >

@@ -6,6 +6,7 @@ import {
   HEADER_AVATAR_IMAGE_HEIGHT,
   HEADER_AVATAR_IMAGE_WIDTH,
 } from "@/constants/image-dimensions";
+import { Y_AXIS_INITIAL_POSITION } from "@/constants/animations";
 
 export const Header = () => {
   return (
@@ -24,7 +25,7 @@ export const Header = () => {
         />
       </motion.div>
       <motion.h3
-        initial={{ y: -20, opacity: 0 }}
+        initial={{ y: Y_AXIS_INITIAL_POSITION, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.3 }}
         className="text-xl md:text-2xl mb-3"
