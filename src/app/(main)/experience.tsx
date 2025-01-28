@@ -48,16 +48,28 @@ export const Experience = () => {
         Explore the milestones of my career, highlighting the roles and projects
         where I contributed, learned, and grew as a professional.
       </motion.p>
-      <div className="relative flex flex-col items-center space-y-12 px-4 py-10">
+      <motion.div
+        className="relative flex flex-col items-center space-y-12 px-4 py-10"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.9 }}
+      >
         <div className="absolute top-0 bottom-0 left-1/2 transform -translate-x-1/2 w-1 bg-muted rounded-full z-0" />
 
         {WorkExperience.map((job, index) => (
-          <div
+          <motion.div
             className={cn(
               "flex flex-col items-center w-full md:w-1/2 space-y-4 relative z-10",
               isEvenIndex(index) ? "md:ml-auto md:pl-8" : "md:mr-auto md:pr-8"
             )}
             key={index}
+            initial={
+              isEvenIndex(index)
+                ? { opacity: 0, x: 50 }
+                : { opacity: 0, x: -50 }
+            }
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 1.1 }}
           >
             <div
               className={cn(
@@ -79,9 +91,9 @@ export const Experience = () => {
                 ))}
               </ul>
             </div>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </motion.div>
   );
 };
