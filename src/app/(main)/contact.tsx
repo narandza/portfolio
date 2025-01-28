@@ -17,6 +17,10 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { zodResolver } from "@hookform/resolvers/zod";
+import {
+  SECONDARY_HEADING_DELAY_TIME,
+  SECONDARY_HEADING_DURATION_TIME,
+} from "@/constants/animations";
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "Must be 2 or more characters long" }),
@@ -76,7 +80,10 @@ export const Contact = () => {
         className="text-center mb-2 text-lg"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.3, delay: 0.5 }}
+        transition={{
+          duration: SECONDARY_HEADING_DURATION_TIME,
+          delay: SECONDARY_HEADING_DELAY_TIME,
+        }}
       >
         Connect with me
       </motion.h4>

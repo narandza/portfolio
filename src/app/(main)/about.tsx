@@ -6,6 +6,10 @@ import {
   PROFILE_IMAGE_WIDTH,
 } from "@/constants/image-dimensions";
 import { InfoList, toolsList } from "@/constants/info-list";
+import {
+  SECONDARY_HEADING_DELAY_TIME,
+  SECONDARY_HEADING_DURATION_TIME,
+} from "@/constants/animations";
 
 export const About = () => {
   return (
@@ -20,7 +24,10 @@ export const About = () => {
         className="text-center mb-2 text-lg"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.3 }}
+        transition={{
+          duration: SECONDARY_HEADING_DURATION_TIME,
+          delay: SECONDARY_HEADING_DELAY_TIME,
+        }}
       >
         Introduction
       </motion.h4>

@@ -2,6 +2,10 @@ import Link from "next/link";
 import { motion } from "motion/react";
 import { ArrowRight } from "lucide-react";
 import { serviceData } from "@/constants/info-list";
+import {
+  SECONDARY_HEADING_DELAY_TIME,
+  SECONDARY_HEADING_DURATION_TIME,
+} from "@/constants/animations";
 
 export const Services = () => {
   return (
@@ -16,7 +20,10 @@ export const Services = () => {
         className="text-center mb-2 text-lg"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.3, delay: 0.5 }}
+        transition={{
+          duration: SECONDARY_HEADING_DURATION_TIME,
+          delay: SECONDARY_HEADING_DELAY_TIME,
+        }}
       >
         What I offer
       </motion.h4>
