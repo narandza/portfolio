@@ -48,41 +48,34 @@ export const Experience = () => {
         Explore the milestones of my career, highlighting the roles and projects
         where I contributed, learned, and grew as a professional.
       </motion.p>
-      <div className=" relative flex flex-col items-center space-y-12  px-[12%] py-10 ">
-        <div className="absolute top-0 bottom-0 left-1/2 w-1 bg-muted-foreground rounded-full" />
+      <div className="relative flex flex-col items-center space-y-12 px-4 py-10">
+        <div className="absolute top-0 bottom-0 left-1/2 transform -translate-x-1/2 w-1 bg-muted rounded-full z-0" />
 
         {WorkExperience.map((job, index) => (
           <div
             className={cn(
-              "flex flex-col items-center md:items-start md:w-1/2 space-y-4 ",
-              isEvenIndex(index) ? "md:ml-auto md:pr-6" : "md:mr-auto md:pl-6"
+              "flex flex-col items-center w-full md:w-1/2 space-y-4 relative z-10",
+              isEvenIndex(index) ? "md:ml-auto md:pl-8" : "md:mr-auto md:pr-8"
             )}
-            style={{
-              transform: isEvenIndex(index)
-                ? "translateX(20%)"
-                : "translateX(-20%)",
-            }}
             key={index}
           >
             <div
               className={cn(
-                "flex items-center justify-center gap-2",
-                isEvenIndex(index) ? "" : "flex-row-reverse "
+                "flex items-center justify-center gap-2 w-full",
+                isEvenIndex(index) ? "md:flex-row" : "md:flex-row-reverse"
               )}
             >
-              <div className="flex items-center justify-center size-5 bg-main rounded-full" />
+              <div className="flex items-center justify-center size-5 bg-main rounded-full z-20" />
               <p className="text-muted-foreground">
                 {formatDate(job.startDate)} - {formatDate(job.endDate)}
               </p>
             </div>
 
-            <div className="p-4 shadow-md rounded-lg">
+            <div className="w-full p-4 shadow-md rounded-lg text-center md:text-left bg-background z-10">
               <h3 className="text-xl font-semibold">{job.position}</h3>
               <ul className="list-disc list-inside mt-2 text-muted-foreground">
                 {job.description.map((description, i) => (
-                  <li className="" key={i}>
-                    {description}
-                  </li>
+                  <li key={i}>{description}</li>
                 ))}
               </ul>
             </div>
