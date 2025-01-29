@@ -8,6 +8,7 @@ import {
 import { InfoList, toolsList } from "@/constants/info-list";
 import {
   PARENT_DIV_DURATION_TIME,
+  PRIMARY_HEADING_DELAY_TIME,
   SECONDARY_HEADING_DELAY_TIME,
   SECONDARY_HEADING_DURATION_TIME,
   Y_AXIS_INITIAL_POSITION,
@@ -37,7 +38,7 @@ export const About = () => {
         className="text-center text-5xl"
         initial={{ opacity: 0, y: Y_AXIS_INITIAL_POSITION }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.3 }}
+        transition={{ duration: 0.5, delay: PRIMARY_HEADING_DELAY_TIME }}
       >
         About me
       </motion.h2>
