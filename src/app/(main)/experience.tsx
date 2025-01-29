@@ -1,4 +1,5 @@
 import {
+  DESCRIPTION_DURATION_TIME,
   PARENT_DIV_DURATION_TIME,
   PRIMARY_HEADING_DELAY_TIME,
   PRIMARY_HEADING_DURATION_TIME,
@@ -57,7 +58,7 @@ export const Experience = () => {
         className="text-center max-w-2xl mx-auto mt-5 mb-12"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.7 }}
+        transition={{ duration: DESCRIPTION_DURATION_TIME, delay: 0.7 }}
       >
         Explore the milestones of my career, highlighting the roles and projects
         where I contributed, learned, and grew as a professional.

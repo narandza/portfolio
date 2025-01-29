@@ -18,6 +18,7 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
+  DESCRIPTION_DURATION_TIME,
   PARENT_DIV_DURATION_TIME,
   PRIMARY_HEADING_DELAY_TIME,
   PRIMARY_HEADING_DURATION_TIME,
@@ -106,7 +107,7 @@ export const Contact = () => {
         className="text-center max-w-2xl mx-auto mt-5 mb-12"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.7 }}
+        transition={{ duration: DESCRIPTION_DURATION_TIME, delay: 0.7 }}
       >
         I&apos;d love to hear from you! If you have any questions, comments, or
         feedback, please use the form below

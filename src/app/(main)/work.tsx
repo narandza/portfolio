@@ -4,6 +4,7 @@ import { ArrowRight, SendIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { workData } from "@/constants/info-list";
 import {
+  DESCRIPTION_DURATION_TIME,
   PARENT_DIV_DURATION_TIME,
   PRIMARY_HEADING_DELAY_TIME,
   PRIMARY_HEADING_DURATION_TIME,
@@ -47,7 +48,7 @@ export const Work = () => {
         className="text-center max-w-2xl mx-auto mt-5 mb-12"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.7 }}
+        transition={{ duration: DESCRIPTION_DURATION_TIME, delay: 0.7 }}
       >
         Welcome to my web development portfolio! Explore a collection of
         projects showcasing my expertise in front-end development

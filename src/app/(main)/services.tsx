@@ -3,6 +3,7 @@ import { motion } from "motion/react";
 import { ArrowRight } from "lucide-react";
 import { serviceData } from "@/constants/info-list";
 import {
+  DESCRIPTION_DURATION_TIME,
   PARENT_DIV_DURATION_TIME,
   PRIMARY_HEADING_DELAY_TIME,
   PRIMARY_HEADING_DURATION_TIME,
@@ -47,7 +48,7 @@ export const Services = () => {
         className="text-center max-w-2xl mx-auto mt-5 mb-12 text-lg"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.7 }}
+        transition={{ duration: DESCRIPTION_DURATION_TIME, delay: 0.7 }}
       >
         I am a frontend developer from Belgrade, Serbia with 3+ years of
         experience
