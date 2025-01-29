@@ -1,5 +1,6 @@
 import {
   CONTENT_DIV_DELAY_TIME,
+  CONTENT_DIV_DURATION_TIME,
   DESCRIPTION_DELAY_TIME,
   DESCRIPTION_DURATION_TIME,
   PARENT_DIV_DURATION_TIME,
@@ -72,7 +73,10 @@ export const Experience = () => {
         className="relative flex flex-col items-center space-y-12 px-4 py-10"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: CONTENT_DIV_DELAY_TIME }}
+        transition={{
+          duration: CONTENT_DIV_DURATION_TIME,
+          delay: CONTENT_DIV_DELAY_TIME,
+        }}
       >
         <div className="absolute top-0 bottom-0 left-1/2 transform -translate-x-1/2 w-1 bg-muted rounded-full z-0" />
 

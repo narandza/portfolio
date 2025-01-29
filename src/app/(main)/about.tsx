@@ -8,6 +8,7 @@ import {
 import { InfoList, toolsList } from "@/constants/info-list";
 import {
   CONTENT_DIV_DELAY_TIME,
+  CONTENT_DIV_DURATION_TIME,
   PARENT_DIV_DURATION_TIME,
   PRIMARY_HEADING_DELAY_TIME,
   PRIMARY_HEADING_DURATION_TIME,
@@ -58,7 +59,7 @@ export const About = () => {
           className="w-64 sm:w-80 rounded-3xl max-w-none"
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: CONTENT_DIV_DURATION_TIME }}
         >
           <Image
             src="/placeholder-image.png"
@@ -72,7 +73,10 @@ export const About = () => {
           className="flex-1"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          transition={{
+            duration: CONTENT_DIV_DURATION_TIME,
+            delay: CONTENT_DIV_DELAY_TIME,
+          }}
         >
           {/* TODO: Add real content */}
           <p className="mb-10 max-w-4xl ">

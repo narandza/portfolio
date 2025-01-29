@@ -12,3 +12,4 @@ export const DESCRIPTION_DELAY_TIME = 0.7;
 export const DESCRIPTION_DURATION_TIME = 0.5;
 
 export const CONTENT_DIV_DELAY_TIME = 0.9;
+export const CONTENT_DIV_DURATION_TIME = 0.6;

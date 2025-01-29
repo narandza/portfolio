@@ -19,6 +19,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
   CONTENT_DIV_DELAY_TIME,
+  CONTENT_DIV_DURATION_TIME,
   DESCRIPTION_DELAY_TIME,
   DESCRIPTION_DURATION_TIME,
   PARENT_DIV_DURATION_TIME,
@@ -124,7 +125,10 @@ export const Contact = () => {
           className="space-y-8 max-w-2xl mx-auto"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: CONTENT_DIV_DELAY_TIME }}
+          transition={{
+            duration: CONTENT_DIV_DURATION_TIME,
+            delay: CONTENT_DIV_DELAY_TIME,
+          }}
         >
           <div className="grid grid-cols-auto lg:grid-cols-2 gap-6 mt-10 mb-8">
             <FormField
@@ -134,7 +138,10 @@ export const Contact = () => {
                 <motion.div
                   initial={{ opacity: 0, x: -50 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 1.1 }}
+                  transition={{
+                    duration: CONTENT_DIV_DURATION_TIME,
+                    delay: 1.1,
+                  }}
                 >
                   <FormItem>
                     <FormLabel>Name</FormLabel>
@@ -154,7 +161,10 @@ export const Contact = () => {
                 <motion.div
                   initial={{ opacity: 0, x: 50 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 1.1 }}
+                  transition={{
+                    duration: CONTENT_DIV_DURATION_TIME,
+                    delay: 1.1,
+                  }}
                 >
                   <FormItem>
                     <FormLabel>Email</FormLabel>
