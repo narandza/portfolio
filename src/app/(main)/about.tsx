@@ -7,6 +7,7 @@ import {
 } from "@/constants/image-dimensions";
 import { InfoList, toolsList } from "@/constants/info-list";
 import {
+  PARENT_DIV_DURATION_TIME,
   SECONDARY_HEADING_DELAY_TIME,
   SECONDARY_HEADING_DURATION_TIME,
   Y_AXIS_INITIAL_POSITION,
@@ -19,7 +20,7 @@ export const About = () => {
       className=" w-full px-[12%] py-10 scroll-mt-20 mt-[220px] flex flex-col items-center "
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      transition={{ duration: 1 }}
+      transition={{ duration: PARENT_DIV_DURATION_TIME }}
     >
       <motion.h4
         className="text-center mb-2 text-lg"

@@ -18,6 +18,7 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
+  PARENT_DIV_DURATION_TIME,
   SECONDARY_HEADING_DELAY_TIME,
   SECONDARY_HEADING_DURATION_TIME,
   Y_AXIS_INITIAL_POSITION,
@@ -75,7 +76,7 @@ export const Contact = () => {
       id="contact"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      transition={{ duration: 1 }}
+      transition={{ duration: PARENT_DIV_DURATION_TIME }}
     >
       <motion.h4
         className="text-center mb-2 text-lg"

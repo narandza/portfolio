@@ -4,6 +4,7 @@ import { ArrowRight, SendIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { workData } from "@/constants/info-list";
 import {
+  PARENT_DIV_DURATION_TIME,
   SECONDARY_HEADING_DELAY_TIME,
   SECONDARY_HEADING_DURATION_TIME,
   Y_AXIS_INITIAL_POSITION,
@@ -16,7 +17,7 @@ export const Work = () => {
       className="w-full px-[12%] py-10 scroll-mt-20"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      transition={{ duration: 1 }}
+      transition={{ duration: PARENT_DIV_DURATION_TIME }}
     >
       <motion.h4
         className="text-center mb-2 text-lg"
