@@ -4,6 +4,7 @@ import { ArrowRight, SendIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { workData } from "@/constants/info-list";
 import {
+  CONTENT_DIV_DELAY_TIME,
   DESCRIPTION_DELAY_TIME,
   DESCRIPTION_DURATION_TIME,
   PARENT_DIV_DURATION_TIME,
@@ -62,7 +63,7 @@ export const Work = () => {
         className="grid grid-cols-auto lg:grid-cols-4 my-10 gap-5"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.6, delay: 0.9 }}
+        transition={{ duration: 0.6, delay: CONTENT_DIV_DELAY_TIME }}
       >
         {workData.map(({ title, description, bgImage }, index) => (
           <motion.div

@@ -3,6 +3,7 @@ import { motion } from "motion/react";
 import { ArrowRight } from "lucide-react";
 import { serviceData } from "@/constants/info-list";
 import {
+  CONTENT_DIV_DELAY_TIME,
   DESCRIPTION_DELAY_TIME,
   DESCRIPTION_DURATION_TIME,
   PARENT_DIV_DURATION_TIME,
@@ -62,7 +63,7 @@ export const Services = () => {
         className="grid grid-cols-auto lg:grid-cols-4 gap-6 my-10"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.6, delay: 0.9 }}
+        transition={{ duration: 0.6, delay: CONTENT_DIV_DELAY_TIME }}
       >
         {serviceData.map(({ icon: Icon, title, description, link }, index) => (
           <motion.div

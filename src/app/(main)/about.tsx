@@ -7,6 +7,7 @@ import {
 } from "@/constants/image-dimensions";
 import { InfoList, toolsList } from "@/constants/info-list";
 import {
+  CONTENT_DIV_DELAY_TIME,
   PARENT_DIV_DURATION_TIME,
   PRIMARY_HEADING_DELAY_TIME,
   PRIMARY_HEADING_DURATION_TIME,
@@ -51,7 +52,7 @@ export const About = () => {
         className="flex w-full flex-col lg:flex-row items-center gap-20 my-20 justify-center"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
+        transition={{ duration: CONTENT_DIV_DELAY_TIME }}
       >
         <motion.div
           className="w-64 sm:w-80 rounded-3xl max-w-none"

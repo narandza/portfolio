@@ -18,6 +18,7 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
+  CONTENT_DIV_DELAY_TIME,
   DESCRIPTION_DELAY_TIME,
   DESCRIPTION_DURATION_TIME,
   PARENT_DIV_DURATION_TIME,
@@ -123,7 +124,7 @@ export const Contact = () => {
           className="space-y-8 max-w-2xl mx-auto"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.9 }}
+          transition={{ duration: 0.5, delay: CONTENT_DIV_DELAY_TIME }}
         >
           <div className="grid grid-cols-auto lg:grid-cols-2 gap-6 mt-10 mb-8">
             <FormField

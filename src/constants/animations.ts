@@ -10,3 +10,5 @@ export const SECONDARY_HEADING_DURATION_TIME = 0.5;
 
 export const DESCRIPTION_DELAY_TIME = 0.7;
 export const DESCRIPTION_DURATION_TIME = 0.5;
+
+export const CONTENT_DIV_DELAY_TIME = 0.9;
