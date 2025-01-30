@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { workData } from "@/constants/info-list";
 import {
   CONTENT_DIV_DELAY_TIME,
+  CONTENT_DIV_DELAY_TIME_EXTENDED,
   CONTENT_DIV_DURATION_TIME,
   DESCRIPTION_DELAY_TIME,
   DESCRIPTION_DURATION_TIME,
@@ -102,7 +103,10 @@ export const Work = () => {
           href=""
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 1.1 }}
+          transition={{
+            duration: CONTENT_DIV_DURATION_TIME,
+            delay: CONTENT_DIV_DELAY_TIME_EXTENDED,
+          }}
         >
           Show more <ArrowRight className="size-4" />
         </motion.a>

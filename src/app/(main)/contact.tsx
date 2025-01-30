@@ -191,7 +191,7 @@ export const Contact = () => {
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{
-                  duration: 0.6,
+                  duration: CONTENT_DIV_DURATION_TIME,
                   delay: CONTENT_DIV_DELAY_TIME_EXTENDED,
                 }}
               >

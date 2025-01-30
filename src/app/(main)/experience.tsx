@@ -96,7 +96,7 @@ export const Experience = () => {
             }
             whileInView={{ opacity: 1, x: 0 }}
             transition={{
-              duration: 0.6,
+              duration: CONTENT_DIV_DURATION_TIME,
               delay: CONTENT_DIV_DELAY_TIME_EXTENDED,
             }}
           >
