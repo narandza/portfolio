@@ -9,6 +9,7 @@ import { InfoList, toolsList } from "@/constants/info-list";
 import {
   CONTENT_DIV_DELAY_TIME,
   CONTENT_DIV_DURATION_TIME,
+  HOVER_SCALE,
   PARENT_DIV_DURATION_TIME,
   PRIMARY_HEADING_DELAY_TIME,
   PRIMARY_HEADING_DURATION_TIME,
@@ -96,7 +97,7 @@ export const About = () => {
               <motion.li
                 key={index}
                 className="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer flex flex-col items-center justify-center hover:bg-muted hover:-translate-y-1 duration-500   hover:shadow-md"
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: HOVER_SCALE }}
               >
                 <Icon className="size-8 mt-3 text-gray-700 dark:text-white" />
                 <h3 className="my-4 font-semibold text-gray-700 dark:text-white">

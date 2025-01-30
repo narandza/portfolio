@@ -7,6 +7,7 @@ import {
   CONTENT_DIV_DURATION_TIME,
   DESCRIPTION_DELAY_TIME,
   DESCRIPTION_DURATION_TIME,
+  HOVER_SCALE,
   PARENT_DIV_DURATION_TIME,
   PRIMARY_HEADING_DELAY_TIME,
   PRIMARY_HEADING_DURATION_TIME,
@@ -73,7 +74,7 @@ export const Services = () => {
           <motion.div
             className="border border-muted rounded-lg px-8 py-12 flex flex-col items-center hover:shadow-md cursor-pointer hover:bg-muted hover:-translate-y-1 duration-500 "
             key={index}
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: HOVER_SCALE }}
             transition={{ duration: 0.3 }}
           >
             <Icon className="size-10 bg-main text-white rounded-sm p-2" />

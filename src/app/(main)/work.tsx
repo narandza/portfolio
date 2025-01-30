@@ -8,6 +8,7 @@ import {
   CONTENT_DIV_DURATION_TIME,
   DESCRIPTION_DELAY_TIME,
   DESCRIPTION_DURATION_TIME,
+  HOVER_SCALE,
   PARENT_DIV_DURATION_TIME,
   PRIMARY_HEADING_DELAY_TIME,
   PRIMARY_HEADING_DURATION_TIME,
@@ -74,7 +75,7 @@ export const Work = () => {
             className="aspect-square bg-no-repeat bg-cover rounded-lg relative cursor-pointer group"
             key={index}
             style={{ backgroundImage: `url(${bgImage})` }}
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: HOVER_SCALE }}
             transition={{ duration: 0.3 }}
           >
             {/* TODO: Make height the same */}
