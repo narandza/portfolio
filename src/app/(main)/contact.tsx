@@ -19,6 +19,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
   CONTENT_DIV_DELAY_TIME,
+  CONTENT_DIV_DELAY_TIME_EXTENDED,
   CONTENT_DIV_DURATION_TIME,
   DESCRIPTION_DELAY_TIME,
   DESCRIPTION_DURATION_TIME,
@@ -137,7 +138,7 @@ export const Contact = () => {
               name="name"
               render={({ field }) => (
                 <motion.div
-                  initial={{ opacity: 0, x: -50 }}
+                  initial={{ opacity: 0, x: -X_AXIS_INITIAL_POSITION }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{
                     duration: CONTENT_DIV_DURATION_TIME,
@@ -187,7 +188,10 @@ export const Contact = () => {
               <motion.div
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 1.3 }}
+                transition={{
+                  duration: 0.6,
+                  delay: CONTENT_DIV_DELAY_TIME_EXTENDED,
+                }}
               >
                 <FormItem>
                   <FormLabel>Message</FormLabel>

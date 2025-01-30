@@ -1,5 +1,6 @@
 import {
   CONTENT_DIV_DELAY_TIME,
+  CONTENT_DIV_DELAY_TIME_EXTENDED,
   CONTENT_DIV_DURATION_TIME,
   DESCRIPTION_DELAY_TIME,
   DESCRIPTION_DURATION_TIME,
@@ -94,7 +95,10 @@ export const Experience = () => {
                 : { opacity: 0, x: -X_AXIS_INITIAL_POSITION }
             }
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 1.1 }}
+            transition={{
+              duration: 0.6,
+              delay: CONTENT_DIV_DELAY_TIME_EXTENDED,
+            }}
           >
             <div
               className={cn(
