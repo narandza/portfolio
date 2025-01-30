@@ -9,6 +9,7 @@ import {
   DESCRIPTION_DELAY_TIME,
   DESCRIPTION_DURATION_TIME,
   HOVER_SCALE,
+  HOVER_TRANSITION_DURATION,
   PARENT_DIV_DURATION_TIME,
   PRIMARY_HEADING_DELAY_TIME,
   PRIMARY_HEADING_DURATION_TIME,
@@ -76,7 +77,7 @@ export const Work = () => {
             key={index}
             style={{ backgroundImage: `url(${bgImage})` }}
             whileHover={{ scale: HOVER_SCALE }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: HOVER_TRANSITION_DURATION }}
           >
             {/* TODO: Make height the same */}
             <div className="bg-background w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between  duration-500 group-hover:bottom-7">

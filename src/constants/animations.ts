@@ -18,3 +18,4 @@ export const CONTENT_DIV_DURATION_TIME = 0.6;
 export const CONTENT_DIV_DELAY_TIME_EXTENDED = 1.1;
 
 export const HOVER_SCALE = 1.05;
+export const HOVER_DURATION = 0.3;
