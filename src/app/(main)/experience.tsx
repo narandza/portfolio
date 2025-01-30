@@ -8,6 +8,7 @@ import {
   PRIMARY_HEADING_DURATION_TIME,
   SECONDARY_HEADING_DELAY_TIME,
   SECONDARY_HEADING_DURATION_TIME,
+  X_AXIS_INITIAL_POSITION,
   Y_AXIS_INITIAL_POSITION,
 } from "@/constants/animations";
 import { WorkExperience } from "@/constants/info-list";
@@ -89,8 +90,8 @@ export const Experience = () => {
             key={index}
             initial={
               isEvenIndex(index)
-                ? { opacity: 0, x: 50 }
-                : { opacity: 0, x: -50 }
+                ? { opacity: 0, x: X_AXIS_INITIAL_POSITION }
+                : { opacity: 0, x: -X_AXIS_INITIAL_POSITION }
             }
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 1.1 }}

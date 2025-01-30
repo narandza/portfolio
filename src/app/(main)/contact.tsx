@@ -27,6 +27,7 @@ import {
   PRIMARY_HEADING_DURATION_TIME,
   SECONDARY_HEADING_DELAY_TIME,
   SECONDARY_HEADING_DURATION_TIME,
+  X_AXIS_INITIAL_POSITION,
   Y_AXIS_INITIAL_POSITION,
 } from "@/constants/animations";
 
@@ -159,7 +160,7 @@ export const Contact = () => {
               name="email"
               render={({ field }) => (
                 <motion.div
-                  initial={{ opacity: 0, x: 50 }}
+                  initial={{ opacity: 0, x: X_AXIS_INITIAL_POSITION }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{
                     duration: CONTENT_DIV_DURATION_TIME,
