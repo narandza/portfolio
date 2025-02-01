@@ -82,10 +82,11 @@ export const About = () => {
         >
           {/* TODO: Add real content */}
           <p className="mb-10 max-w-4xl ">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident
-            reprehenderit sint a voluptate ab itaque, ratione aperiam.
-            Doloremque vero repudiandae, totam, accusamus velit, quod quia quasi
-            veritatis quidem consequuntur atque!
+            I am a Front-End Developer based in Belgrade with 3 years of
+            experience building dynamic, user-friendly web applications.
+            Passionate about creating intuitive interfaces and seamless user
+            experiences, I specialize in JavaScript, React, and modern front-end
+            technologies.
           </p>
 
           <motion.ul
